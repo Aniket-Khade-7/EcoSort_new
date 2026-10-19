@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoSort</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EcoSort</h1>
+      <p>Learn to sort waste the right way</p>
+      <nav>
+        <span> Welcome</span>
+        <br />
+        <span> Learn</span>
+        <br />
+        <span> Game</span>
+        <span> Quiz</span>
+        <span> Results</span>
+      </nav>
+    </header>
+
+    <main>
+      <section id="welcomeScreen" class="screen">
+        <h2>Welcome to EcoSort</h2>
+        <p id="courseIntro">Loading course</p>
+        <label>Your name</label>
+        <input
+          id="learnerName"
+          type="text"
+          placeholder="Enter at least 2 characters"
+        />
+        <p id="nameHelp">Please enter your name to begin.</p>
+        <button id="startButton" disabled>Start learning</button>
+      </section>
+
+      <section id="learnScreen" class="screen hidden">
+        <h2>Learn about the bins</h2>
+        <p>Click each card to see what belongs in that bin.</p>
+        <div id="learnCards" class="card-grid"></div>
+        <p id="viewCounter">Cards viewed: 0 of 3</p>
+        <button id="learnNextButton" disabled>Next: Sorting game</button>
+      </section>
+
+      <section id="gameScreen" class="screen hidden">
+        <h2>Sorting game</h2>
+        <p>Drag each item into the correct bin.</p>
+        <div class="score-row">
+          <p>Score: <strong id="gameScore">0</strong></p>
+          <p>
+            Sorted: <strong id="sortedCount">0</strong> of
+            <strong id="itemTotal">0</strong>
+          </p>
+        </div>
+        <h3>Waste items</h3>
+        <div id="itemTray" class="item-tray"></div>
+        <h3>Bins</h3>
+        <div id="binArea" class="bin-grid"></div>
+        <p id="gameFeedback" aria-live="polite">
+          Pick up an item and move it to a bin.
+        </p>
+        <button id="gameNextButton" class="hidden">Continue to quiz</button>
+      </section>
+
+      <section id="quizScreen" class="screen hidden">
+        <h2>EcoSort quiz</h2>
+        <p id="quizProgress"></p>
+        <h3 id="questionText"></h3>
+        <fieldset>
+          <legend>Choose one answer</legend>
+          <div id="answerOptions"></div>
+        </fieldset>
+        <p id="quizFeedback" aria-live="polite"></p>
+        <button id="submitAnswer" disabled>Submit answer</button>
+        <button id="nextQuestion" class="hidden">Next question</button>
+        <button id="resultsButton" class="hidden">See results</button>
+      </section>
+
+      <section id="resultsScreen" class="screen hidden">
+        <h2>Your results</h2>
+        <p id="resultGreeting"></p>
+        <div class="result-grid">
+          <div class="result-card">
+            <h3>Sorting game</h3>
+            <p id="resultGameScore"></p>
+          </div>
+          <div class="result-card">
+            <h3>Quiz</h3>
+            <p id="resultQuizScore"></p>
+          </div>
+          <div class="result-card" id="totalResultCard">
+            <h3>Total</h3>
+            <p id="resultPercent"></p>
+          </div>
+        </div>
+        <p id="resultMessage"></p>
+        <button id="retryQuiz">Retry quiz</button>
+        <button id="restartCourse">Restart course</button>
+      </section>
+    </main>
+
+    <footer><p>EcoSort</p></footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

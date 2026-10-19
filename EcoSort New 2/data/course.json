@@ -1,0 +1,133 @@
+{
+  "course": {
+    "title": "EcoSort",
+    "intro": "Learn how to sort everyday waste into the right bin.",
+    "passMark": 60
+  },
+  "bins": [
+    {
+      "id": "recycle",
+      "name": "Recycle",
+      "color": "Blue",
+      "description": "Items that can be recycled.",
+      "examples": [
+        "Paper",
+        "Clean plastic bottles",
+        "Soda cans"
+      ]
+    },
+    {
+      "id": "compost",
+      "name": "Compost",
+      "color": "Green",
+      "description": "Food and plant waste that can break down naturally.",
+      "examples": [
+        "Banana peel",
+        "Apple core",
+        "Food scraps"
+      ]
+    },
+    {
+      "id": "landfill",
+      "name": "Landfill",
+      "color": "Grey",
+      "description": "Items that cannot be recycled or composted in this game.",
+      "examples": [
+        "Chip packet",
+        "Broken toy",
+        "Used tissue"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "soda-can",
+      "name": "Soda can",
+      "bin": "recycle",
+      "hint": "Metal cans can be recycled."
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "bin": "recycle",
+      "hint": "Clean paper belongs in recycling."
+    },
+    {
+      "id": "plastic-bottle",
+      "name": "Plastic bottle",
+      "bin": "recycle",
+      "hint": "Clean plastic bottles can be recycled."
+    },
+    {
+      "id": "banana-peel",
+      "name": "Banana peel",
+      "bin": "compost",
+      "hint": "Fruit peels can break down in compost."
+    },
+    {
+      "id": "apple-core",
+      "name": "Apple core",
+      "bin": "compost",
+      "hint": "Food scraps belong in compost."
+    },
+    {
+      "id": "chip-packet",
+      "name": "Chip packet",
+      "bin": "landfill",
+      "hint": "This packet goes in landfill in this example."
+    },
+    {
+      "id": "broken-toy",
+      "name": "Broken toy",
+      "bin": "landfill",
+      "hint": "This toy goes in landfill in this simple game."
+    },
+    {
+      "id": "used-tissue",
+      "name": "Used tissue",
+      "bin": "landfill",
+      "hint": "Used tissues go in landfill in this example."
+    }
+  ],
+  "quiz": [
+    {
+      "question": "Where should a clean soda can go?",
+      "options": [
+        "Recycle",
+        "Compost",
+        "Landfill"
+      ],
+      "answer": "Recycle",
+      "feedback": {
+        "correct": "Correct! A clean soda can can be recycled.",
+        "incorrect": "Remember: metal cans can be recycled."
+      }
+    },
+    {
+      "question": "Where should a banana peel go?",
+      "options": [
+        "Landfill",
+        "Compost",
+        "Recycle"
+      ],
+      "answer": "Compost",
+      "feedback": {
+        "correct": "Correct! Fruit peels can be composted.",
+        "incorrect": "Fruit peels are food waste, so choose compost."
+      }
+    },
+    {
+      "question": "Where should a chip packet go in this game?",
+      "options": [
+        "Compost",
+        "Recycle",
+        "Landfill"
+      ],
+      "answer": "Landfill",
+      "feedback": {
+        "correct": "Correct for this example!",
+        "incorrect": "In this simple game, choose landfill."
+      }
+    }
+  ]
+}
